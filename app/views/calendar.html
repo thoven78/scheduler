@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="marketing">
+  	<h4>Users</h4>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users" ng-click="selectUser(user)" class="animate-show" ng-class="{'active': user.id == activeUser.id}">
+          <td>{{ user.id }}</td>
+          <td>{{ user.firstname }}</td>
+          <td>{{ user.lastname }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+	<table class="table table-bordered">
+  	<thead>
+    	<tr>
+    	  <th ng-repeat="title in header">{{ title }}</th>
+    	</tr>
+  	</thead>
+  	<tbody ng-repeat="(hour, items) in data">
+    	<tr ng-repeat="item in items">
+      	<td rowspan="{{ items.length }}" ng-show="$first" class="vertical-align">{{ hour }}</td>
+      	<td ng-class="{'active': item.active == activeUser.id && activeUser.isBusy }" ng-click="toggleAvailability(item, hour, $index)">{{ item.text }}</td>
+        <td ng-class="{'active': item.active == activeUser.id && activeUser.isBusy }" ng-click="toggleAvailability(item, hour, $index)">{{ item.text }}</td>
+        <td ng-class="{'active': item.active == activeUser.id && activeUser.isBusy }" ng-click="toggleAvailability(item, hour, $index)">{{ item.text }}</td>
+        <td ng-class="{'active': item.active == activeUser.id && activeUser.isBusy }" ng-click="toggleAvailability(item, hour, $index)">{{ item.text }}</td>
+        <td ng-class="{'active': item.active == activeUser.id && activeUser.isBusy }" ng-click="toggleAvailability(item, hour, $index)">{{ item.text }}</td>
+        <td ng-class="{'active': item.active == activeUser.id && activeUser.isBusy }" ng-click="toggleAvailability(item, hour, $index)">{{ item.text }}</td>
+        <td ng-class="{'active': item.active == activeUser.id && activeUser.isBusy }" ng-click="toggleAvailability(item, hour, $index)">{{ item.text }}</td>
+    	</tr>
+  	</tbody>
+	</table>
+</div>
